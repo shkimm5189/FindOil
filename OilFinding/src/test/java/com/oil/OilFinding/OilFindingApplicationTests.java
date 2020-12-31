@@ -8,6 +8,7 @@ class OilFindingApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
