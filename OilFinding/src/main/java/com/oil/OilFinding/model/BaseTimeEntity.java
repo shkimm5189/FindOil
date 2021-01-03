@@ -22,8 +22,9 @@ import java.time.LocalDateTime;
 public abstract class BaseTimeEntity {
     //최초 생성일은 초기에 지정시에 수정 될일이 없다.
     @CreatedDate
-    @Column(updatable = false)
+    @Column(updatable = false,nullable = false)
     private LocalDateTime registerDate;
     @LastModifiedDate
+    @Column(updatable = true,nullable = true)
     private LocalDateTime updateDate;
 }

@@ -32,6 +32,8 @@ public class UserTest {
         System.out.println(user.getEmail());
         System.out.println(user.getPassword());
     }
+
+
     @Test
     public void delete(){
         User user = userRepository.findById(2L).orElse(null);
