@@ -14,4 +14,26 @@ public class UserController {
         ModelAndView mv = new ModelAndView("/pages/loginPage");
         return mv;
     }
+    @GetMapping("/temp")
+    public ModelAndView tempp(){
+        ModelAndView mvv = new ModelAndView("/pages/timeline");
+        return mvv;
+    }
+    @GetMapping("/timeline")
+    public ModelAndView temppq(){
+        ModelAndView mvvv = new ModelAndView("/pages/UI/timeline");
+        return mvvv;
+    }
+    @GetMapping("/test")
+    public ModelAndView test(){
+        ModelAndView testt = new ModelAndView("/pages/index");
+        return testt;
+    }
+
+    @GetMapping("/index")
+    public ModelAndView index(){
+        ModelAndView indexx = new ModelAndView("/index");
+        return indexx;
+    }
+
 }
