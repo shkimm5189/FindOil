@@ -38,3 +38,5 @@ out/
 
 
 #DATABASE 정보
+application.properties
+application-oauth.properties
