@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 @RequestMapping("/oil")
 public class UserController {
-    @GetMapping("/user")
+    @GetMapping("/login")
     public ModelAndView create(){
         ModelAndView mv = new ModelAndView("/pages/loginPage");
         return mv;
