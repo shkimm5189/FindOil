@@ -7,7 +7,7 @@
         let data = {}
         data.email = id;
         data.password = password;
-        
+
         //console.log(data);
         $.ajax({
             type: 'POST',
