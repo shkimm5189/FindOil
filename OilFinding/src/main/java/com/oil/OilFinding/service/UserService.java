@@ -1,5 +1,8 @@
 package com.oil.OilFinding.service;
 
+import ch.qos.logback.core.net.LoginAuthenticator;
+import com.oil.OilFinding.model.entity.Login;
+import com.oil.OilFinding.model.entity.User;
 import com.oil.OilFinding.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,7 +16,8 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByEmail(username)
-                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다."));
+        User user = userRepository.findByEmail().orElseThrow(UsernameNotFoundException::new);
+        return new Login(user);
     }
+
 }
